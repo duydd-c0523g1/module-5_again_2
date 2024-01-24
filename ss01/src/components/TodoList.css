@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.addTaskForm {
+    margin: 5% 10%;
+}
+
+table {
+    margin: 0 10%;
+    width: 100%;
+}
