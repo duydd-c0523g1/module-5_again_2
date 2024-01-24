@@ -1,0 +1,33 @@
+*{
+  position: relative;
+}
+
+h1{
+  text-align: center;
+}
+
+.list{
+  width: 100%;
+  justify-content: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+ 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+ 
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+footer{
+  text-align: center;
+  margin: 100px 0;
+}
