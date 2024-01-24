@@ -2,12 +2,10 @@ import "./TodoList.css";
 import { useEffect, useState } from "react";
 
 export default function TodoList() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([{ id: 1, taskName: "Placeholder" }]);
   const [task, setTask] = useState({});
 
-  useEffect(() => {
-    setTasks([{ id: 1, taskName: "Placeholder" }]);
-  }, []);
+  useEffect(() => {}, []);
 
   const handleInputChange = (evt) => {
     setTask((prevState) => {
@@ -20,16 +18,25 @@ export default function TodoList() {
   };
 
   const handleSubmit = () => {
-    setTasks((prevState) => [...prevState, task]);
+    setTasks((prevState) => [...prevState, ...[task]]);
     // setTask({
     //   id: "",
     //   taskName: ""
     // })
-    console.log(tasks);
   };
   return (
     <div className="container-fluid">
       <h1>TO DO LIST</h1>
+      {/* <iframe
+        style={{ borderRadius: 12 }}
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DWVOaOWiVD1Lf?utm_source=generator"
+        width="100%"
+        height={352}
+        frameBorder={0}
+        allowFullScreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      /> */}
       <div className="addTaskForm">
         <form className="row g-3">
           <label htmlFor="inputTask">Task ID:</label>
@@ -38,6 +45,7 @@ export default function TodoList() {
               type="text"
               className="form-control"
               id="inputId"
+              name="id"
               value={task.id}
               onChange={handleInputChange}
             />
@@ -48,6 +56,7 @@ export default function TodoList() {
               type="text"
               className="form-control"
               id="inputTask"
+              name="taskName"
               value={task.taskName}
               onChange={handleInputChange}
             />
@@ -73,7 +82,7 @@ export default function TodoList() {
         </thead>
         <tbody>
           {tasks.map((task) => (
-            <tr key={task.taskName}>
+            <tr key={task.id}>
               <td>{task.id}</td>
               <td>{task.taskName}</td>
               <td>
