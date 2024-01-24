@@ -19,7 +19,7 @@ export default function TodoList() {
     console.log(evt.target.value);
   };
 
-  const handleSubmit = (task) => {
+  const handleSubmit = () => {
     setTasks((prevState) => [...prevState, task]);
     // setTask({
     //   id: "",
