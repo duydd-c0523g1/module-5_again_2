@@ -18,11 +18,11 @@ export default function TodoList() {
   };
 
   const handleSubmit = () => {
-    setTasks((prevState) => [...prevState, ...[task]]);
-    // setTask({
-    //   id: "",
-    //   taskName: ""
-    // })
+    setTasks((prevState) => [...prevState, task]);
+    setTask({
+      id: "",
+      taskName: ""
+    })
   };
   return (
     <div className="container-fluid">
@@ -39,7 +39,7 @@ export default function TodoList() {
       /> */}
       <div className="addTaskForm">
         <form className="row g-3">
-          <label htmlFor="inputTask">Task ID:</label>
+          <label htmlFor="inputId">Task ID:</label>
           <div className="col-auto">
             <input
               type="text"
