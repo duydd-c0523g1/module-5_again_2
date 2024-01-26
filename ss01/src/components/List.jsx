@@ -2,10 +2,10 @@ import "./TodoList.css";
 import { useEffect, useState } from "react";
 
 export default function TodoList() {
-  const [tasks, setTasks] = useState([{ id: 1, taskName: "Placeholder" }]);
+  const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState({});
 
-  useEffect(() => {}, []);
+  useEffect(() => setTasks([{ id: 1, taskName: "Placeholder" }]), []);
 
   const handleInputChange = (evt) => {
     setTask((prevState) => {
