@@ -2,18 +2,6 @@
   "blogs": [
     {
       "userId": 2,
-      "id": "13",
-      "title": "dolorum ut in voluptas mollitia et saepe quo animi",
-      "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
-    },
-    {
-      "userId": 2,
-      "id": "14",
-      "title": "voluptatem eligendi optio",
-      "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
-    },
-    {
-      "userId": 2,
       "id": "16",
       "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
       "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
@@ -143,12 +131,6 @@
       "id": "39",
       "title": "eos dolorem iste accusantium est eaque quam",
       "body": "corporis rerum ducimus vel eum accusantium\nmaxime aspernatur a porro possimus iste omnis\nest in deleniti asperiores fuga aut\nvoluptas sapiente vel dolore minus voluptatem incidunt ex"
-    },
-    {
-      "userId": 4,
-      "id": "40",
-      "title": "enim quo cumque",
-      "body": "ut voluptatum aliquid illo tenetur nemo sequi quo facilis\nipsum rem optio mollitia quas\nvoluptatem eum voluptas qui\nunde omnis voluptatem iure quasi maxime voluptas nam"
     },
     {
       "userId": 5,

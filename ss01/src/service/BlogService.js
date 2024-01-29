@@ -21,7 +21,7 @@ export const updateBlog = async (blog, id) => {
     axios.patch("http://localhost:8080/blogs/" + id, blog)
 }
 
-export const findByName = async (name) => {
-    let matches = await axios.get("http://localhost:8080/blogs?title_like=" + name)
+export const findByName = async (title) => {
+    let matches = await axios.get("http://localhost:8080/blogs?title_like=" + title)
     return matches.data;
 }

@@ -1,12 +1,16 @@
 import { getAll } from "../../service/BlogService";
 import { removeBlog } from "../../service/BlogService";
+import { findByName } from "../../service/BlogService";
 import { useEffect, useState } from "react";
+import "./blog.css";
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [blogDelete, setBlogDelete] = useState({});
   const [modalTitle, setModalTitle] = useState("");
-  const [modalContent, setModalContent] = useState("")
+  const [modalContent, setModalContent] = useState("");
+
+  const [searchName, setSearchName] = useState("");
   // const list = async () => {
   //   const temp = await getAll();
   //   setBlogs(temp);
@@ -14,16 +18,36 @@ export default function Blogs() {
   const list = async () => {
     const temp = await getAll();
     setBlogs(temp);
-  }
+  };
+
+  const findBlog = async () => {
+    let temp = await findByName(searchName);
+    setBlogs(temp);
+  };
+  // useEffect(() => {
+  //   list();
+  // }, [blogs.length]);
+
   useEffect(() => {
-    list()
-  },[blogs]);
+    findBlog();
+  }, [searchName, blogs]);
 
   return (
     <>
       <h1>Blog List</h1>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
+          <div className="col">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search"
+              aria-label="Search"
+              value={searchName}
+              onChange={(event) => setSearchName(event.target.value)}
+            />
+          </div>
+
           <table className="table-sm">
             <thead>
               <tr>
@@ -48,7 +72,9 @@ export default function Blogs() {
                       onClick={() => {
                         setBlogDelete(item);
                         setModalTitle("Delete Blog");
-                        setModalContent(`Are you sure you want to delete "${item.title}"?`);
+                        setModalContent(
+                          `Are you sure you want to delete "${item.title}"?`
+                        );
                       }}
                     >
                       Delete
@@ -89,7 +115,12 @@ export default function Blogs() {
                   >
                     Close
                   </button>
-                  <button type="button" className="btn btn-danger" onClick={() => removeBlog(blogDelete)} data-bs-dismiss="modal">
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => removeBlog(blogDelete)}
+                    data-bs-dismiss="modal"
+                  >
                     Delete
                   </button>
                 </div>
