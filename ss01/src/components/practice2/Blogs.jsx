@@ -1,15 +1,24 @@
-import * as blogService from "../service/BlogService";
-import { useState } from "react";
+import { getAll } from "../../service/BlogService";
+import { removeBlog } from "../../service/BlogService";
+import { useEffect, useState } from "react";
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [blogDelete, setBlogDelete] = useState({});
   const [modalTitle, setModalTitle] = useState("");
   const [modalContent, setModalContent] = useState("")
-  const getAll = async () => {
-    const temp = await blogService.getAll();
+  // const list = async () => {
+  //   const temp = await getAll();
+  //   setBlogs(temp);
+  // };
+  const list = async () => {
+    const temp = await getAll();
     setBlogs(temp);
-  };
+  }
+  useEffect(() => {
+    list()
+  },[blogs]);
+
   return (
     <>
       <h1>Blog List</h1>
@@ -27,7 +36,7 @@ export default function Blogs() {
             <tbody>
               {blogs.map((item, index) => (
                 <tr key={item.id}>
-                  <td>{index}</td>
+                  <td>{index + 1}</td>
                   <td>{item.title}</td>
                   <td>{item.body}</td>
                   <td>
@@ -39,7 +48,7 @@ export default function Blogs() {
                       onClick={() => {
                         setBlogDelete(item);
                         setModalTitle("Delete Blog");
-                        setModalContent(`Are you sure you want to delete "${item.title}" ?`);
+                        setModalContent(`Are you sure you want to delete "${item.title}"?`);
                       }}
                     >
                       Delete
@@ -80,7 +89,7 @@ export default function Blogs() {
                   >
                     Close
                   </button>
-                  <button type="button" className="btn btn-danger" onClick={blogService.removeBlog(blogDelete)}>
+                  <button type="button" className="btn btn-danger" onClick={() => removeBlog(blogDelete)} data-bs-dismiss="modal">
                     Delete
                   </button>
                 </div>
