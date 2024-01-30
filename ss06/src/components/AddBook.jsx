@@ -40,7 +40,7 @@ export default function AddBook() {
                   id="formGroupExampleInput"
                   name="title"
                 />
-                <ErrorMessage name="title" component="span" />
+                <ErrorMessage name="title" component="span" className="errorField" />
               </div>
               <div className="mb-3">
                 <label htmlFor="formGroupExampleInput2" className="form-label">
@@ -52,7 +52,7 @@ export default function AddBook() {
                   id="formGroupExampleInput2"
                   name="quantity"
                 />
-                <ErrorMessage name="quantity" component="span" />
+                <ErrorMessage name="quantity" component="span" className="errorField" />
               </div>
               <button className="btn btn-primary" type="submit">
                 Add
