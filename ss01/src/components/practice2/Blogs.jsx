@@ -20,13 +20,17 @@ export default function Blogs() {
     setBlogs(temp);
   };
 
+  const deleteBlog = async () => {
+    await removeBlog(blogDelete);
+  }
+
   const findBlog = async () => {
     let temp = await findByName(searchName);
     setBlogs(temp);
   };
   // useEffect(() => {
   //   list();
-  // }, [blogs.length]);
+  // }, [blogs]);
 
   useEffect(() => {
     findBlog();
@@ -118,7 +122,7 @@ export default function Blogs() {
                   <button
                     type="button"
                     className="btn btn-danger"
-                    onClick={() => removeBlog(blogDelete)}
+                    onClick={deleteBlog}
                     data-bs-dismiss="modal"
                   >
                     Delete
