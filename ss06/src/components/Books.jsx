@@ -18,6 +18,7 @@ export default function BookList() {
     await removeBook(bookDelete);
     getAllBooks();
   };
+
   useEffect(() => {
     getAllBooks();
     console.log(bookList);
@@ -49,9 +50,10 @@ export default function BookList() {
                         role="group"
                         aria-label="Basic mixed styles example"
                       >
-                        <button type="button" className="btn btn-warning">
+                        <Link to={"update/" + book.id}><button type="button" className="btn btn-warning">
                           Edit
-                        </button>
+                        </button></Link>
+                        
                         <button
                           type="button"
                           className="btn btn-danger"

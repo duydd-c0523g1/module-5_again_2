@@ -16,3 +16,12 @@ export const addBook = async (book) => {
 export const removeBook = async (book) => {
     await axios.delete('http://localhost:8080/books/' + book.id)
 }
+
+export const findById = async (id) => {
+    let temp  = await axios.get('http://localhost:8080/books/' + id)
+    return temp.data;
+}
+
+export const updateBook = async (book, id) => {
+    await axios.patch('http://localhost:8080/books/' + id, book)
+}

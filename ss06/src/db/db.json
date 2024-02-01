@@ -2,13 +2,13 @@
   "books": [
     {
       "id": 1,
-      "title": "book number one",
-      "quantity": 10
+      "title": "bôk2",
+      "quantity": 12
     },
     {
       "id": 2,
-      "title": "book number two",
-      "quantity": 100
+      "title": "123123",
+      "quantity": 123123
     }
   ]
 }
