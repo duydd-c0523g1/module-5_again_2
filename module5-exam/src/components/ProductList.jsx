@@ -7,9 +7,9 @@ export default function () {
   const [name, setName] = useState("");
   const [productDelete, setProductDelete] = useState({});
 
-  useEffect(() => {
-    getAll();
-  }, []);
+  // useEffect(() => {
+  //   getAll();
+  // }, []);
 
   const getAll = async () => {
     let temp = await getAllProducts();
