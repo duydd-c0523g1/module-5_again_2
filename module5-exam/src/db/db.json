@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "importDate": "19/02/2024",
+      "quantity": 100,
+      "type": "Shirt"
+    },
+    {
+      "id": 2,
+      "name": "Polo shirt",
+      "importDate": "19/02/2024",
+      "quantity": 100,
+      "type": "Shirt"
+    }
+  ]
+}
