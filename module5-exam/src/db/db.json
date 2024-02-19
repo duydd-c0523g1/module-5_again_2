@@ -3,16 +3,44 @@
     {
       "id": 1,
       "name": "T-Shirt",
-      "importDate": "19/02/2024",
-      "quantity": 100,
+      "importDate": "2024-01-19",
+      "quantity": 1.5,
       "type": "Shirt"
     },
     {
       "id": 2,
       "name": "Polo shirt",
-      "importDate": "19/02/2024",
+      "importDate": "2024-02-19",
       "quantity": 100,
       "type": "Shirt"
+    },
+    {
+      "id": 3,
+      "name": "Denim jacket",
+      "importDate": "2024-02-19",
+      "quantity": 100,
+      "type": "Jacket"
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Trainer TR1",
+      "importDate": "2024-02-19",
+      "quantity": 100,
+      "type": "Shoes"
+    },
+    {
+      "id": 5,
+      "name": "Nike Air Huarache Run Ultra",
+      "importDate": "2024-02-19",
+      "quantity": 12,
+      "type": "Shoes"
+    },
+    {
+      "name": "Duy12345",
+      "quantity": 10,
+      "importDate": "2024-02-19",
+      "type": "Product",
+      "id": 6
     }
   ]
 }
